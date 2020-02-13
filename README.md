@@ -2,7 +2,7 @@
 
 
 [![Build Status](https://travis-ci.org/pharo-ai/TF-IDF.svg?branch=master)](https://travis-ci.org/pharo-ai/TF-IDF)
-[![Build status](https://ci.appveyor.com/api/projects/status/r25rfpbcq9xin235?svg=true)](https://ci.appveyor.com/project/olekscode/tfidf)
+[![Build status](https://ci.appveyor.com/api/projects/status/plkr5qalvfl89xtd?svg=true)](https://ci.appveyor.com/project/olekscode/tf-idf)
 [![Coverage Status](https://coveralls.io/repos/github/pharo-ai/TF-IDF/badge.svg?branch=master)](https://coveralls.io/github/pharo-ai/TF-IDF?branch=master)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/pharo-ai/TF-IDF/master/LICENSE)
 
