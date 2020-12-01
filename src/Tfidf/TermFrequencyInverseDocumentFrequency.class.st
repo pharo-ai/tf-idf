@@ -8,14 +8,14 @@ Class {
 	#category : #Tfidf
 }
 
-{ #category : #'as yet unclassified' }
+{ #category : #internal }
 TermFrequencyInverseDocumentFrequency >> inverseDocumentFrequencyOf: aWord [
 	^ self log: (self numberOfDocuments / (self numberOfDocumentsThatContainWord: aWord)).
 ]
 
-{ #category : #'instance creation' }
+{ #category : #hooks }
 TermFrequencyInverseDocumentFrequency >> log: aNumber [
-	"Natural logarithm used o compute IDF. Can be overriden by subclasses"
+	"Natural logarithm used to compute IDF. Can be overriden by subclasses"
 	^ aNumber ln
 ]
 
@@ -30,7 +30,7 @@ TermFrequencyInverseDocumentFrequency >> numberOfDocumentsThatContainWord: aWord
 	
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #internal }
 TermFrequencyInverseDocumentFrequency >> scoreOf: aWord in: aDocument [
 	| tf idf |
 	tf := self termFrequencyOf: aWord in: aDocument.
@@ -38,23 +38,23 @@ TermFrequencyInverseDocumentFrequency >> scoreOf: aWord in: aDocument [
 	^ tf * idf
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #internal }
 TermFrequencyInverseDocumentFrequency >> termFrequencyOf: aWord in: aDocument [
 	^ aDocument occurrencesOf: aWord
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #internal }
 TermFrequencyInverseDocumentFrequency >> trainOn: aCollectionOfDocuments [
 	numberOfDocuments := aCollectionOfDocuments size.
 	perWordDocumentCount := (aCollectionOfDocuments flatCollect: [ :document | document asSet ]) asBag.
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #internal }
 TermFrequencyInverseDocumentFrequency >> vectorFor: aDocument [
 	^ self vocabulary collect: [ :word | self scoreOf: word in: aDocument ].
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #accessing }
 TermFrequencyInverseDocumentFrequency >> vocabulary [
 	^ perWordDocumentCount asSet sorted
 ]
