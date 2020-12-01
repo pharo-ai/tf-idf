@@ -1,5 +1,6 @@
 # Term Frequency - Inverse Document Frequency (TF-IDF)
 
+![https://github.com/pharo-ai/TF-IDF/workflows/test/badge.svg](https://github.com/pharo-ai/TF-IDF/workflows/test/badge.svg)
 
 [![Build Status](https://travis-ci.org/pharo-ai/TF-IDF.svg?branch=master)](https://travis-ci.org/pharo-ai/TF-IDF)
 [![Build status](https://ci.appveyor.com/api/projects/status/plkr5qalvfl89xtd?svg=true)](https://ci.appveyor.com/project/olekscode/tf-idf)
