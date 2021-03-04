@@ -13,7 +13,7 @@ To install `TF-IDF`, go to the Playground (Ctrl+OW) in your [Pharo](https://phar
 ```Smalltalk
 Metacello new
   baseline: 'Tfidf';
-  repository: 'github://pharo-ai/TF-IDF/src';
+  repository: 'github://pharo-ai/tf-idf/src';
   load.
 ```
 
@@ -24,7 +24,7 @@ If you want to add a dependency on `TF-IDF` to your project, include the followi
 ```Smalltalk
 spec
   baseline: 'Tfidf'
-  with: [ spec repository: 'github://pharo-ai/TF-IDF/src' ].
+  with: [ spec repository: 'github://pharo-ai/tf-idf/src' ].
 ```
 
 If you are new to baselines and Metacello, check out the [Baselines](https://github.com/pharo-open-documentation/pharo-wiki/blob/master/General/Baselines.md) tutorial on Pharo Wiki.
@@ -43,7 +43,7 @@ sentences := #(
 You can train a TF-IDF model on those sentences:
 
 ```Smalltalk
-tfidf := TermFrequencyInverseDocumentFrequency new.
+tfidf := AITermFrequencyInverseDocumentFrequency new.
 tfidf trainOn: sentences.
 ```
 
