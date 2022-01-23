@@ -1,6 +1,6 @@
 # Term Frequency - Inverse Document Frequency (TF-IDF)
 
-![https://github.com/pharo-ai/TF-IDF/workflows/test/badge.svg](https://github.com/pharo-ai/TF-IDF/workflows/test/badge.svg)
+[![Build status](https://github.com/pharo-ai/tf-idf/workflows/CI/badge.svg)](https://github.com/pharo-ai/tf-idf/actions/workflows/test.yml)
 [![Coverage Status](https://coveralls.io/repos/github/pharo-ai/TF-IDF/badge.svg?branch=master)](https://coveralls.io/github/pharo-ai/TF-IDF?branch=master)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/pharo-ai/TF-IDF/master/LICENSE)
 
