@@ -17,9 +17,11 @@ AITermFrequencyInverseDocumentFrequency >> inverseDocumentFrequencyOf: aWord [
 	^ self log: self numberOfDocuments / (self numberOfDocumentsThatContainWord: aWord)
 ]
 
-{ #category : #hooks }
+{ #category : #internal }
 AITermFrequencyInverseDocumentFrequency >> log: aNumber [
+
 	"Natural logarithm used to compute IDF. Can be overriden by subclasses"
+
 	^ aNumber ln
 ]
 
