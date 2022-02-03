@@ -12,7 +12,7 @@ To install `TF-IDF`, go to the Playground (Ctrl+OW) in your [Pharo](https://phar
 
 ```Smalltalk
 Metacello new
-  baseline: 'Tfidf';
+  baseline: 'AITfIdf';
   repository: 'github://pharo-ai/tf-idf/src';
   load.
 ```
@@ -23,7 +23,7 @@ If you want to add a dependency on `TF-IDF` to your project, include the followi
 
 ```Smalltalk
 spec
-  baseline: 'Tfidf'
+  baseline: 'AITfIdf'
   with: [ spec repository: 'github://pharo-ai/tf-idf/src' ].
 ```
 
