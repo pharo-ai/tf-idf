@@ -1,26 +1,26 @@
 Class {
-	#name : #TermFrequencyInverseDocumentFrequencyTest,
+	#name : #AITermFrequencyInverseDocumentFrequencyTest,
 	#superclass : #TestCase,
 	#instVars : [
 		'documents',
 		'tfidf'
 	],
-	#category : #'Tfidf-Tests'
+	#category : #'AI-TF-IDF-Tests'
 }
 
 { #category : #running }
-TermFrequencyInverseDocumentFrequencyTest >> setUp [ 
+AITermFrequencyInverseDocumentFrequencyTest >> setUp [ 
 	documents := #(
 		(I am Sam)
 		(Sam I am)
 		(I 'don''t' like green eggs and ham)).
 		
-	tfidf := TermFrequencyInverseDocumentFrequency new.
+	tfidf := AITermFrequencyInverseDocumentFrequency new.
 	tfidf trainOn: documents.
 ]
 
 { #category : #tests }
-TermFrequencyInverseDocumentFrequencyTest >> testInverseDocumentFrequencyOf [
+AITermFrequencyInverseDocumentFrequencyTest >> testInverseDocumentFrequencyOf [
 	| words expected actual |
 	words := #(I am Sam 'don''t' like green eggs and ham).
 	
@@ -31,12 +31,12 @@ TermFrequencyInverseDocumentFrequencyTest >> testInverseDocumentFrequencyOf [
 ]
 
 { #category : #tests }
-TermFrequencyInverseDocumentFrequencyTest >> testNumberOfDocuments [
+AITermFrequencyInverseDocumentFrequencyTest >> testNumberOfDocuments [
 	self assert: tfidf numberOfDocuments equals: 3
 ]
 
 { #category : #tests }
-TermFrequencyInverseDocumentFrequencyTest >> testNumberOfDocumentsThatContainWord [
+AITermFrequencyInverseDocumentFrequencyTest >> testNumberOfDocumentsThatContainWord [
 	| words expectedCounts actualCounts |
 	words := #(I am Sam 'don''t' like green eggs and ham).
 	
@@ -47,7 +47,7 @@ TermFrequencyInverseDocumentFrequencyTest >> testNumberOfDocumentsThatContainWor
 ]
 
 { #category : #tests }
-TermFrequencyInverseDocumentFrequencyTest >> testScoreOfIn [
+AITermFrequencyInverseDocumentFrequencyTest >> testScoreOfIn [
 	| document words expected actual |
 	document := #(I am green green ham).
 	words := #(I am green ham).
@@ -60,7 +60,7 @@ TermFrequencyInverseDocumentFrequencyTest >> testScoreOfIn [
 ]
 
 { #category : #tests }
-TermFrequencyInverseDocumentFrequencyTest >> testTermFrequencyOfIn [
+AITermFrequencyInverseDocumentFrequencyTest >> testTermFrequencyOfIn [
 	| document expected actual |
 	document := #(hello world hello hello world).
 	
@@ -71,7 +71,7 @@ TermFrequencyInverseDocumentFrequencyTest >> testTermFrequencyOfIn [
 ]
 
 { #category : #tests }
-TermFrequencyInverseDocumentFrequencyTest >> testVectorFor [
+AITermFrequencyInverseDocumentFrequencyTest >> testVectorFor [
 	| document tf idf expected actual |
 	document := #(I am green green ham).
 	
@@ -88,7 +88,7 @@ TermFrequencyInverseDocumentFrequencyTest >> testVectorFor [
 ]
 
 { #category : #tests }
-TermFrequencyInverseDocumentFrequencyTest >> testVocabulary [
+AITermFrequencyInverseDocumentFrequencyTest >> testVocabulary [
 	| expected actual |
 	
 	expected := #(I Sam am and 'don''t' eggs green ham like).
