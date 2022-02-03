@@ -1,14 +1,14 @@
 SmalltalkCISpec {
   #loading : [
     SCIMetacelloLoadSpec {
-      #baseline : 'Tfidf',
+      #baseline : 'AITfIdf',
       #directory : 'src',
       #platforms : [ #pharo ]
     }
   ],
   #testing : {
     #coverage : {
-      #packages : [ 'Tfidf*' ]
+      #packages : [ 'AI-TF-IDF*' ]
     }
   }
 }
